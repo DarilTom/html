@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            flex-direction: column;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 420px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-weight: 600;
+            color: #555;
+            align-self: flex-start;
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            transition: 0.3s;
+            font-size: 16px;
+            text-align: left;
+        }
+        input:focus {
+            border-color: #764ba2;
+            outline: none;
+            box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            background-color: #764ba2;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #5a3c88;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Online Booking Form</h2>
+        <form action="/submit_booking" method="post">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Address *</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="booking-date">Desired Booking Date & Time *</label>
+            <input type="datetime-local" id="booking-date" name="booking_date" required>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>
